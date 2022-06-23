@@ -26,9 +26,9 @@
             app:srcCompat="@drawable/logolong" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/lgo"
             android:layout_width="wrap_content"
-            android:layout_height="35dp"
+            android:layout_height="24dp"
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:scaleType="fitEnd"

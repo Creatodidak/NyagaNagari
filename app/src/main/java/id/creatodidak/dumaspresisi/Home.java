@@ -1,7 +1,10 @@
 package id.creatodidak.dumaspresisi;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +19,7 @@ public class Home extends AppCompatActivity {
     private static final String TAG = Home.class.getSimpleName();
     Session session;
     String nama, alamat, nik, hp;
+    ImageView lgo;
     private BottomNavigationView bottomNavigation;
     private Fragment fragment;
     private FragmentManager fragmentManager;
@@ -33,7 +37,15 @@ public class Home extends AppCompatActivity {
 
         String SSnik = session.getUserDetail().get(Session.NIK);
 
-
+        lgo = findViewById(R.id.lgo);
+        lgo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                session.logoutSession();
+                moveToLogin();
+                finish();
+            }
+        });
         bottomNavigation = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         bottomNavigation.inflateMenu(R.menu.bottom_navigation_items);
         fragmentManager = getSupportFragmentManager();
@@ -70,5 +82,10 @@ public class Home extends AppCompatActivity {
     }
 
     private void moveToLogin() {
+        Intent intent = new Intent(Home.this, Login.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY);
+        startActivity(intent);
+
+        finish();
     }
 }

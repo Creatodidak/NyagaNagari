@@ -13,4 +13,5 @@ public class Config {
     public static final String PROGRESS_URL = WEB + "/dumaspresisi/progress";
     public static final String PDF_FETCH_URL = WEB + "/getPDF.php";
     public static final String SARAN = WEB + "/dumaspresisi/saran";
+    public static final String UPDATE = WEB + "/dumaspresisi/update";
 }

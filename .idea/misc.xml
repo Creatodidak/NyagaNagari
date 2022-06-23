@@ -20,9 +20,10 @@
         <entry key="app/src/main/res/layout/frsaran.xml" value="0.22" />
         <entry key="app/src/main/res/layout/inputpengaduan.xml" value="0.296875" />
         <entry key="app/src/main/res/layout/listprogress.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/login.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/slider_layout.xml" value="0.14578879863189398" />
         <entry key="app/src/main/res/layout/splash.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/update.xml" value="0.33" />
         <entry key="app/src/main/res/menu/bottom_navigation_items.xml" value="0.1466438648995297" />
       </map>
     </option>

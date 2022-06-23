@@ -9,6 +9,7 @@ import id.creatodidak.dumaspresisi.Model.Logins;
 import id.creatodidak.dumaspresisi.Model.Reg;
 import id.creatodidak.dumaspresisi.Model.Response;
 import id.creatodidak.dumaspresisi.Model.Saran;
+import id.creatodidak.dumaspresisi.Model.Update;
 import id.creatodidak.dumaspresisi.Model.prog.ProgressItem;
 import okhttp3.RequestBody;
 import retrofit2.Call;
@@ -69,4 +70,7 @@ public interface ApiInterface {
     Call<Saran> inputSaran(@Field("nama") String nama,
                            @Field("nik") String nik,
                            @Field("saran") String saran);
+
+    @POST(Config.UPDATE)
+    Call<Update> update();
 }
