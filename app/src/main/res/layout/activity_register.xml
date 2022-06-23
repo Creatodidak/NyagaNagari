@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="35dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/logo"
+            tools:layout_marginBottom="50dp" />
+
+        <EditText
+            android:id="@+id/nik"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/inputtextbg"
+            android:ems="10"
+            android:hint="NIK (Sesuai KTP)"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textColorHighlight="#00A6FF"
+            android:textColorHint="#AEAEAE"
+            android:textColorLink="#00A6FF" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/inputtextbg"
+            android:ems="10"
+            android:hint="Nama Lengkap (Sesuai KTP)"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColorHighlight="#00A6FF"
+            android:textColorHint="#AEAEAE"
+            android:textColorLink="#00A6FF" />
+
+        <EditText
+            android:id="@+id/alamat"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/inputtextbg"
+            android:ems="10"
+            android:gravity="top|left"
+            android:hint="Alamat Lengkap (Sesuai KTP)"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:textColorHighlight="#00A6FF"
+            android:textColorHint="#AEAEAE"
+            android:textColorLink="#00A6FF" />
+
+        <EditText
+            android:id="@+id/nohp"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/inputtextbg"
+            android:ems="10"
+            android:hint="No HP / WA"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textColorHighlight="#00A6FF"
+            android:textColorHint="#AEAEAE"
+            android:textColorLink="#00A6FF" />
+
+        <TextView
+            android:id="@+id/hpWarning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="Pastikan No. HP Aktif dan Dapat Dihubungi"
+            android:textColor="#B30000"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/inputtextbg"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColorHighlight="#00A6FF"
+            android:textColorHint="#AEAEAE"
+            android:textColorLink="#00A6FF" />
+
+        <Button
+            android:id="@+id/regBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#00A6FF"
+            android:text="MENDAFTAR"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/foot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/beranda"
+        android:icon="@drawable/homeic"
+        android:title="HOME"/>
+    <item
+        android:id="@+id/lapor"
+        android:icon="@drawable/lapor"
+        android:title="LAPOR"/>
+    <item
+        android:id="@+id/progress"
+        android:icon="@drawable/progress"
+        android:title="PROGRESS"/>
+
+    <item
+        android:id="@+id/saran"
+        android:icon="@drawable/saran"
+        android:title="SARAN"/>
+
+</menu>
