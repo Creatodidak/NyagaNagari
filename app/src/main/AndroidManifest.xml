@@ -24,6 +24,9 @@
         android:theme="@style/Theme.DumasPresisi"
         tools:targetApi="31">
         <activity
+            android:name=".test"
+            android:exported="false" />
+        <activity
             android:name=".BacaBerita"
             android:exported="false" />
         <activity
