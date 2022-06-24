@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "135640858086",
+    "project_id": "nyaga-nagari",
+    "storage_bucket": "nyaga-nagari.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135640858086:android:bb6bd9d894ea7b7c73ea27",
+        "android_client_info": {
+          "package_name": "id.creatodidak.nyaganagari"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "135640858086-l1n8dhlvgkv23b3lorf3s4mfminu3627.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlfk5wnzYD9qW2ZncKf5onSUnLUPwvCSM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "135640858086-l1n8dhlvgkv23b3lorf3s4mfminu3627.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135640858086:android:5be2a5c53f4ff6b773ea27",
+        "android_client_info": {
+          "package_name": "id.creatodidak.nyaganagaripolreslandak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "135640858086-3b0gcd37s7cdrvu8hsfcjtbijg02t59q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.creatodidak.nyaganagaripolreslandak",
+            "certificate_hash": "2c436fc3bf45272c6223105a5f6a69964c6e5d54"
+          }
+        },
+        {
+          "client_id": "135640858086-l1n8dhlvgkv23b3lorf3s4mfminu3627.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlfk5wnzYD9qW2ZncKf5onSUnLUPwvCSM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "135640858086-l1n8dhlvgkv23b3lorf3s4mfminu3627.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

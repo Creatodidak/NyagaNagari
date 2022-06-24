@@ -1,4 +1,4 @@
-package id.creatodidak.dumaspresisi;
+package id.creatodidak.nyaganagari;
 
 import static org.junit.Assert.assertEquals;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("id.creatodidak.dumaspresisi", appContext.getPackageName());
+        assertEquals("id.creatodidak.nyaganagari", appContext.getPackageName());
     }
 }

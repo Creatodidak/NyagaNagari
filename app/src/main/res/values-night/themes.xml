@@ -11,7 +11,7 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">#272727</item>
-        <item name="fontFamily">@font/monsreg</item>
+        <item name="fontFamily">@font/futur</item>
         <item name="android:textSize">14sp</item>
 
         <!-- Customize your theme here. -->
