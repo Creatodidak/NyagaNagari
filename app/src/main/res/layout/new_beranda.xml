@@ -11,37 +11,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/imageView4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="35dp"
+            android:background="#000000"
+            android:padding="5dp"
+            app:srcCompat="@drawable/logolong" />
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="75dp"
-                android:layout_height="50dp"
-                android:background="#000000"
-                app:srcCompat="@drawable/logoldk" />
-
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tab_layout"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:background="#000000"
-                app:tabGravity="fill"
-                app:tabIconTint="@color/white"
-                app:tabIndicatorAnimationMode="elastic"
-                app:tabIndicatorColor="#1E88E5"
-                app:tabIndicatorGravity="bottom"
-                app:tabIndicatorHeight="5dp"
-                app:tabMode="fixed"
-                app:tabPaddingEnd="3dp"
-                app:tabPaddingStart="3dp"
-                app:tabSelectedTextColor="#ADD8FF"
-                app:tabTextColor="@color/white"
-                tools:ignore="SpeakableTextPresentCheck" />
-        </LinearLayout>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="#000000"
+            app:tabGravity="fill"
+            app:tabIconTint="@color/white"
+            app:tabIndicatorAnimationMode="elastic"
+            app:tabIndicatorColor="#1E88E5"
+            app:tabIndicatorGravity="bottom"
+            app:tabIndicatorHeight="5dp"
+            app:tabMode="fixed"
+            app:tabPaddingEnd="3dp"
+            app:tabPaddingStart="3dp"
+            app:tabSelectedTextColor="#ADD8FF"
+            app:tabTextColor="@color/white"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/locx"
@@ -51,7 +46,7 @@
             android:text="TextView"
             android:textColor="@color/white"
             android:textIsSelectable="true"
-            android:visibility="visible"
+            android:visibility="gone"
             tools:ignore="TouchTargetSizeCheck" />
 
     </com.google.android.material.appbar.AppBarLayout>

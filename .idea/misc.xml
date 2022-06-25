@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/NyagaNagari/app/src/main/res/layout/activity_home.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/NyagaNagari/app/src/main/res/layout/customtab.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/NyagaNagari/app/src/main/res/layout/fragment_baca_berita.xml" value="0.12552083333333333" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/NyagaNagari/app/src/main/res/layout/fragment_pelayanan.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/NyagaNagari/app/src/main/res/layout/fragment_penmas.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/NyagaNagari/app/src/main/res/layout/new_beranda.xml" value="0.27291666666666664" />
         <entry key="app/src/main/res/drawable/bar.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/btnup.xml" value="0.1765" />
         <entry key="app/src/main/res/drawable/inputtextbg.xml" value="0.1405" />

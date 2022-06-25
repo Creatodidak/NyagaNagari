@@ -61,10 +61,27 @@ public class Beranda extends AppCompatActivity {
         });
         tabLayout = findViewById(R.id.tab_layout);
         viewPager = findViewById(R.id.view_pager);
-        tabLayout.addTab(tabLayout.newTab().setText("BERANDA"));
-        tabLayout.addTab(tabLayout.newTab().setText("MENU"));
-        tabLayout.addTab(tabLayout.newTab().setText("PELAYANAN"));
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_baseline_help_outline_24));
+
+        View view1 = getLayoutInflater().inflate(R.layout.customtab, null);
+        view1.findViewById(R.id.icon).setBackgroundResource(R.drawable.ichome);
+        tabLayout.addTab(tabLayout.newTab().setCustomView(view1));
+
+        View view2 = getLayoutInflater().inflate(R.layout.customtab, null);
+        view2.findViewById(R.id.icon).setBackgroundResource(R.drawable.icmenu);
+        tabLayout.addTab(tabLayout.newTab().setCustomView(view2));
+
+        View view3 = getLayoutInflater().inflate(R.layout.customtab, null);
+        view3.findViewById(R.id.icon).setBackgroundResource(R.drawable.icpelayanan);
+        tabLayout.addTab(tabLayout.newTab().setCustomView(view3));
+
+        View view4 = getLayoutInflater().inflate(R.layout.customtab, null);
+        view4.findViewById(R.id.icon).setBackgroundResource(R.drawable.icpenmas);
+        tabLayout.addTab(tabLayout.newTab().setCustomView(view4));
+
+        View view5 = getLayoutInflater().inflate(R.layout.customtab, null);
+        view5.findViewById(R.id.icon).setBackgroundResource(R.drawable.icbantuan);
+        tabLayout.addTab(tabLayout.newTab().setCustomView(view5));
+
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         final TabAdapter adapter = new TabAdapter(this,getSupportFragmentManager(),
                 tabLayout.getTabCount());

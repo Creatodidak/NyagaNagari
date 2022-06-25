@@ -10,6 +10,7 @@ import id.creatodidak.nyaganagari.Fragment.BantuanFr;
 import id.creatodidak.nyaganagari.Fragment.BeritaFr;
 import id.creatodidak.nyaganagari.Fragment.MenuFr;
 import id.creatodidak.nyaganagari.Fragment.PelayananFr;
+import id.creatodidak.nyaganagari.Fragment.PenmasFr;
 
 /**
  * Created by BRIPDA ANGGI PERIANTO on 24,June,2022 CREATODIDAK anggiperianto41ays@gmail.com
@@ -35,6 +36,9 @@ public class TabAdapter extends FragmentPagerAdapter {
                 PelayananFr pelayananFr = new PelayananFr();
                 return pelayananFr;
             case 3:
+                PenmasFr penmasFr = new PenmasFr();
+                return penmasFr;
+            case 4:
                 BantuanFr bantuanFr = new BantuanFr();
                 return bantuanFr;
             default:

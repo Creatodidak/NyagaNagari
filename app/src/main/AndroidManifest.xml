@@ -19,7 +19,7 @@
         android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:networkSecurityConfig="@xml/network_security_config"
-        android:roundIcon="@drawable/logo"
+        android:roundIcon="@drawable/logook"
         android:supportsRtl="true"
         android:theme="@style/Theme.DumasPresisi"
         tools:targetApi="31">
