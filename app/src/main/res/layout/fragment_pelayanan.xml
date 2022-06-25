@@ -56,6 +56,13 @@
                     android:src="@drawable/yanskck" />
 
                 <ImageView
+                    android:id="@+id/imageView19"
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/yaniden" />
+
+                <ImageView
                     android:id="@+id/imageView17"
                     android:layout_width="match_parent"
                     android:layout_height="175dp"

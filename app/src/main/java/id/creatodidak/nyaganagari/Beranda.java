@@ -67,7 +67,7 @@ public class Beranda extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setCustomView(view1));
 
         View view2 = getLayoutInflater().inflate(R.layout.customtab, null);
-        view2.findViewById(R.id.icon).setBackgroundResource(R.drawable.icmenu);
+        view2.findViewById(R.id.icon).setBackgroundResource(R.drawable.icpengaduan);
         tabLayout.addTab(tabLayout.newTab().setCustomView(view2));
 
         View view3 = getLayoutInflater().inflate(R.layout.customtab, null);

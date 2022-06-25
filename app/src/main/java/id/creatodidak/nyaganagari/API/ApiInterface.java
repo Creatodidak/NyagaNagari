@@ -8,11 +8,11 @@ import id.creatodidak.nyaganagari.Confighome;
 import id.creatodidak.nyaganagari.Models.BacaBerita;
 import id.creatodidak.nyaganagari.Models.BeritaItem;
 import id.creatodidak.nyaganagari.Models.Mlogin;
+import id.creatodidak.nyaganagari.Models.Update;
 import id.creatodidak.nyaganagari.dumas.Config;
 import id.creatodidak.nyaganagari.dumas.Model.Reg;
 import id.creatodidak.nyaganagari.dumas.Model.Response;
 import id.creatodidak.nyaganagari.dumas.Model.Saran;
-import id.creatodidak.nyaganagari.dumas.Model.Update;
 import id.creatodidak.nyaganagari.dumas.Model.prog.ProgressItem;
 import okhttp3.RequestBody;
 import retrofit2.Call;
@@ -81,7 +81,7 @@ public interface ApiInterface {
                            @Field("saran") String saran);
 
     @POST(Config.UPDATE)
-    Call<Update> update();
+    Call<Update> updates();
 
     @GET(Confighome.BERITA)
     Call<List<BeritaItem>> getBerita();

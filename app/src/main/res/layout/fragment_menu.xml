@@ -5,10 +5,48 @@
     android:layout_height="match_parent"
     tools:context=".Fragment.MenuFr">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.glide.slider.library.SliderLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futurbold"
+                android:gravity="center"
+                android:text="Layanan Aspirasi dan Pengaduan Masyarakat Landak"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:justificationMode="inter_word"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="Silahkan Sampaikan Aspirasi, Pengaduan Maupun Laporan Anda Langsung Kepada Polres Landak" />
+
+            <View
+                android:id="@+id/divider6"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginEnd="100dp"
+                android:background="?android:attr/listDivider" />
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>
