@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DumasPolres">
+
+    <ScrollView
+        android:id="@+id/mainS"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/Etnamax"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/inputtextbg"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:hint="NIK"
+                    android:inputType="none|number"
+                    android:padding="10dp" />
+
+                <EditText
+                    android:id="@+id/Etnama"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/inputtextbg"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:hint="Nama Sesuai KTP"
+                    android:inputType="textPersonName"
+                    android:padding="10dp" />
+
+                <EditText
+                    android:id="@+id/Etalamat"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/inputtextbg"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:gravity="top|left"
+                    android:hint="Alamat Sesuai KTP"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp" />
+
+                <EditText
+                    android:id="@+id/Ethp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/inputtextbg"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:hint="No. HP/WA (08xx)"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    app:layout_columnWeight="2" />
+
+                <Spinner
+                    android:id="@+id/spJenislaporan"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/spinnerbg"
+                    tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+                <Spinner
+                    android:id="@+id/spPelayanan"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/spinnerbg"
+                    android:visibility="gone"
+                    tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+                <EditText
+                    android:id="@+id/etNamaterlapor"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/inputtextbg"
+                    android:ems="10"
+                    android:hint="Nama Terlapor (Termasuk Pangkat Jika Diketahui)"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    app:layout_columnWeight="2" />
+
+                <EditText
+                    android:id="@+id/Etsaran"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/inputtextbg"
+                    android:ems="10"
+                    android:gravity="top|left"
+                    android:hint="Jelaskan Pengaduan Anda"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/lyPick"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/upbg"
+                        app:layout_columnWeight="2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvPick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pilih Bukti Foto/Video"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/imageView7"
+                        app:layout_constraintTop_toTopOf="@+id/imageView7" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="16dp"
+                    android:checked="false"
+                    android:text="&quot;Saya menyatakan bahwa laporan ini saya buat dengan sebenar-benarnya dengan kesadaran penuh dan tanpa paksaan dari pihak manapun, saya siap mempertanggungjawabkan laporan saya ini berdasarkan hukum yang berlaku di Negara Kesatuan Republik Indonesia&quot;" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#039BE5"
+                    android:text="BUAT LAPORAN" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

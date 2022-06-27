@@ -1,14 +1,20 @@
 package id.creatodidak.nyaganagari.Fragment;
 
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.bumptech.glide.request.RequestOptions;
@@ -20,6 +26,7 @@ import com.glide.slider.library.tricks.ViewPagerEx;
 
 import java.util.ArrayList;
 
+import id.creatodidak.nyaganagari.DumasPolres;
 import id.creatodidak.nyaganagari.R;
 
 /**
@@ -128,6 +135,45 @@ public class MenuFr extends Fragment implements ViewPagerEx.OnPageChangeListener
         mDemoSlider.setDuration(5000);
         mDemoSlider.addOnPageChangeListener(this);
         mDemoSlider.stopCyclingWhenTouch(false);
+
+        ImageView dms = view.findViewById(R.id.dmsldk);
+
+        dms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ask();
+            }
+        });
+
+        ImageView lapor = view.findViewById(R.id.dmslapor);
+        ImageView wbs = view.findViewById(R.id.wbs);
+
+        lapor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://lapor.go.id";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
+
+        wbs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://wbs.polri.go.id";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
+    }
+
+    private void ask() {
+
+
+        Intent intent = new Intent(getContext(), DumasPolres.class);
+        startActivity(intent);
     }
 
     @Override

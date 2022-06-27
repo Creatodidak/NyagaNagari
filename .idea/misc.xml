@@ -12,8 +12,10 @@
         <entry key="app/src/main/res/drawable/upbg.xml" value="0.1765" />
         <entry key="app/src/main/res/layout/activity_baca_berita.xml" value="0.1466438648995297" />
         <entry key="app/src/main/res/layout/activity_checkupdate.xml" value="0.1466438648995297" />
+        <entry key="app/src/main/res/layout/activity_dumas_polres.xml" value="0.17864583333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17864583333333334" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.14478682988602787" />
+        <entry key="app/src/main/res/layout/activity_rincian_update.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_test.xml" value="0.17864583333333334" />
         <entry key="app/src/main/res/layout/activity_widget_panic_button.xml" value="0.17864583333333334" />
         <entry key="app/src/main/res/layout/aksipengaduan.xml" value="0.17864583333333334" />
@@ -30,6 +32,7 @@
         <entry key="app/src/main/res/layout/listprogress.xml" value="0.25" />
         <entry key="app/src/main/res/layout/login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/new_beranda.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/notification.xml" value="0.17864583333333334" />
         <entry key="app/src/main/res/layout/panic_button.xml" value="0.17864583333333334" />
         <entry key="app/src/main/res/layout/slider_layout.xml" value="0.14578879863189398" />
         <entry key="app/src/main/res/layout/splash.xml" value="0.22" />

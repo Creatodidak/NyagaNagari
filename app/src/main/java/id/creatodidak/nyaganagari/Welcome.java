@@ -64,14 +64,28 @@ public class Welcome extends AppCompatActivity {
                 }else{
 
                     Toast.makeText(Welcome.this, "PEMBARUAN TERSEDIA!", Toast.LENGTH_SHORT).show();
-                    setContentView(R.layout.update);
-                    if (checkPermission()) {
-                        id.creatodidak.nyaganagari.dumas.UpdateApp atualizaApp = new id.creatodidak.nyaganagari.dumas.UpdateApp();
-                        atualizaApp.setContext(Welcome.this);
-                        atualizaApp.execute("https://polreslandak.id/media/app-debug.apk");
-                    } else {
-                        requestPermission();
-                    }
+
+                        setContentView(R.layout.activity_rincian_update);
+                        Button gas = findViewById(R.id.gass);
+                        ProgressBar pb = findViewById(R.id.progressBar3);
+                        gas.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                if (checkPermission()) {
+
+                                    pb.setVisibility(View.VISIBLE);
+                                    gas.setVisibility(View.GONE);
+
+
+                                    id.creatodidak.nyaganagari.dumas.UpdateApp atualizaApp = new id.creatodidak.nyaganagari.dumas.UpdateApp();
+                                    atualizaApp.setContext(Welcome.this);
+                                    atualizaApp.execute("https://polreslandak.id/media/app-debug.apk");
+                                } else {
+                                    requestPermission();
+                                }
+                            }
+                        });
+
                 }
             }
 
