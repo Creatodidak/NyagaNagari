@@ -5,12 +5,15 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationManager;
 import android.location.LocationRequest;
 import android.os.Bundle;
 import android.os.Looper;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +30,10 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.tabs.TabLayout;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
 
 import id.creatodidak.nyaganagari.Adapter.TabAdapter;
 
@@ -99,6 +106,8 @@ public class Beranda extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {
             }
         });
+
+
     }
     @SuppressLint("MissingPermission")
     private void getLastLocation() {
@@ -119,7 +128,25 @@ public class Beranda extends AppCompatActivity {
                         if (location == null) {
                             requestNewLocationData();
                         } else {
-                            loc.setText(location.getLatitude()+","+location.getLongitude());
+                            double lat = location.getLatitude();
+                            double lng = location.getLongitude();
+                            Geocoder geocoder = new Geocoder(Beranda.this, Locale.getDefault());
+                            try {
+                                List<Address> addresses = geocoder.getFromLocation(lat, lng, 1);
+                                Address obj = addresses.get(0);
+                                String add = obj.getAddressLine(0);
+
+
+                                loc.setText("Lokasi Anda \n"+add);
+                                // Toast.makeText(this, "Address=>" + add,
+                                // Toast.LENGTH_SHORT).show();
+
+                                // TennisAppActivity.showDialog(add);
+                            } catch (IOException e) {
+                                // TODO Auto-generated catch block
+                                e.printStackTrace();
+                                Toast.makeText(Beranda.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
                         }
                     }
                 });
@@ -157,7 +184,27 @@ public class Beranda extends AppCompatActivity {
         @Override
         public void onLocationResult(LocationResult locationResult) {
             Location mLastLocation = locationResult.getLastLocation();
-            loc.setText(mLastLocation.getLatitude()+","+mLastLocation.getLongitude());
+            //loc.setText(mLastLocation.getLatitude()+","+mLastLocation.getLongitude());
+            double lat = mLastLocation.getLatitude();
+            double lng = mLastLocation.getLongitude();
+            Geocoder geocoder = new Geocoder(Beranda.this, Locale.getDefault());
+            try {
+                List<Address> addresses = geocoder.getFromLocation(lat, lng, 1);
+                Address obj = addresses.get(0);
+                String add = obj.getAddressLine(0);
+
+
+
+               loc.setText("Lokasi Anda \n"+add);
+                // Toast.makeText(this, "Address=>" + add,
+                // Toast.LENGTH_SHORT).show();
+
+                // TennisAppActivity.showDialog(add);
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+                Toast.makeText(Beranda.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
         }
     };
 

@@ -20,26 +20,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp" />
 
-            <TextView
-                android:id="@+id/textView18"
+            <ImageView
+                android:id="@+id/imageView21"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/futurbold"
-                android:gravity="center"
-                android:text="Layanan Aspirasi dan Pengaduan Masyarakat Landak"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView20"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:gravity="center"
-                android:justificationMode="inter_word"
-                android:paddingStart="5dp"
-                android:paddingEnd="5dp"
-                android:text="Silahkan Sampaikan Aspirasi, Pengaduan Maupun Laporan Anda Langsung Kepada Polres Landak" />
+                android:layout_height="174dp"
+                android:src="@drawable/wlc" />
 
             <View
                 android:id="@+id/divider6"
@@ -49,37 +34,53 @@
                 android:layout_marginEnd="100dp"
                 android:background="?android:attr/listDivider" />
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="25dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="10dp">
-
-                <ImageView
-                    android:id="@+id/imageView20"
-                    android:layout_width="match_parent"
-                    android:layout_height="65dp"
-                    android:layout_margin="5dp"
-                    android:src="@drawable/silahkan" />
-            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/imageView20"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:src="@drawable/silahkan" />
 
             <ImageView
                 android:id="@+id/dmsldk"
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:src="@drawable/landak" />
+                android:layout_height="174dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/simpado" />
+
+            <View
+                android:id="@+id/divider10"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_margin="5dp"
+                android:background="?android:attr/listDivider" />
 
             <ImageView
                 android:id="@+id/dmslapor"
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="174dp"
+                android:scaleType="fitXY"
                 android:src="@drawable/laporv" />
+
+            <View
+                android:id="@+id/divider12"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_margin="5dp"
+                android:background="?android:attr/listDivider" />
+
             <ImageView
                 android:id="@+id/wbs"
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="174dp"
+                android:scaleType="fitXY"
                 android:src="@drawable/wbs" />
+
+            <View
+                android:id="@+id/divider11"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_margin="5dp"
+                android:background="?android:attr/listDivider" />
         </LinearLayout>
     </ScrollView>
 </FrameLayout>
