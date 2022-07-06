@@ -1,6 +1,5 @@
-package id.creatodidak.nyaganagari.dumas;
+package id.creatodidak.nyaganagari;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,10 +11,9 @@ import com.developer.kalert.KAlertDialog;
 
 import java.util.Locale;
 
-import id.creatodidak.nyaganagari.R;
-import id.creatodidak.nyaganagari.dumas.API.ApiClient;
-import id.creatodidak.nyaganagari.dumas.API.ApiInterface;
-import id.creatodidak.nyaganagari.dumas.Model.Reg;
+import id.creatodidak.nyaganagari.API.ApiClient;
+import id.creatodidak.nyaganagari.API.ApiInterface;
+import id.creatodidak.nyaganagari.Models.Reg;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

@@ -4,9 +4,8 @@ import com.google.gson.JsonObject;
 
 import java.util.List;
 
-import id.creatodidak.nyaganagari.Models.BeritaItem;
 import id.creatodidak.nyaganagari.dumas.Config;
-import id.creatodidak.nyaganagari.dumas.Model.Reg;
+import id.creatodidak.nyaganagari.Models.Reg;
 import id.creatodidak.nyaganagari.dumas.Model.Response;
 import id.creatodidak.nyaganagari.dumas.Model.Saran;
 import id.creatodidak.nyaganagari.dumas.Model.Update;

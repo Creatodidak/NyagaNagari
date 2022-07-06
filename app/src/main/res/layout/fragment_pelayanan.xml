@@ -11,7 +11,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/imageView12"
+            android:id="@+id/laporkan"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_margin="10dp"
@@ -26,7 +26,7 @@
             android:layout_height="0dp"
             android:paddingBottom="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imageView12"
+            app:layout_constraintTop_toBottomOf="@id/laporkan"
             tools:ignore="SpeakableTextPresentCheck">
 
             <LinearLayout
@@ -35,35 +35,35 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView18"
+                    android:id="@+id/plSPKT"
                     android:layout_width="match_parent"
                     android:layout_height="175dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/yanspkt" />
 
                 <ImageView
-                    android:id="@+id/imageView15"
+                    android:id="@+id/plSIM"
                     android:layout_width="match_parent"
                     android:layout_height="175dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/yansim" />
 
                 <ImageView
-                    android:id="@+id/imageView16"
+                    android:id="@+id/plSKCK"
                     android:layout_width="match_parent"
                     android:layout_height="175dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/yanskck" />
 
                 <ImageView
-                    android:id="@+id/imageView19"
+                    android:id="@+id/plIDEN"
                     android:layout_width="match_parent"
                     android:layout_height="175dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/yaniden" />
 
                 <ImageView
-                    android:id="@+id/imageView17"
+                    android:id="@+id/plVAKSIN"
                     android:layout_width="match_parent"
                     android:layout_height="175dp"
                     android:layout_margin="10dp"

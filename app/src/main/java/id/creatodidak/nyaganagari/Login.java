@@ -14,11 +14,8 @@ import com.developer.kalert.KAlertDialog;
 
 import id.creatodidak.nyaganagari.API.ApiClient;
 import id.creatodidak.nyaganagari.API.ApiInterface;
-import id.creatodidak.nyaganagari.dumas.Home;
-import id.creatodidak.nyaganagari.dumas.Model.Data;
+import id.creatodidak.nyaganagari.Models.Data;
 import id.creatodidak.nyaganagari.Models.Mlogin;
-import id.creatodidak.nyaganagari.dumas.Register;
-import id.creatodidak.nyaganagari.dumas.Session;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -33,10 +30,13 @@ public class Login extends AppCompatActivity {
     ApiInterface apiInterface;
     Session session;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
+
+
 
         register = findViewById(R.id.tvReg);
         register.setOnClickListener(v -> {
@@ -81,7 +81,7 @@ public class Login extends AppCompatActivity {
 
                     session.createLoginSession(data);
 
-                    Intent intent = new Intent(Login.this, Home.class);
+                    Intent intent = new Intent(Login.this, Beranda.class);
                     startActivity(intent);
 
                 }
@@ -111,5 +111,6 @@ public class Login extends AppCompatActivity {
         });
 
     }
+
 
 }

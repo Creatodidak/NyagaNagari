@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:background="#000000"
             android:gravity="center"
-            android:text="TextView"
+            android:text="AKTIFKAN LAYANAN LOKASI ANDA!"
             android:textColor="@color/white"
             android:textIsSelectable="true"
             android:visibility="visible"

@@ -2,7 +2,7 @@ package id.creatodidak.nyaganagari.Models;
 
 import com.google.gson.annotations.SerializedName;
 
-import id.creatodidak.nyaganagari.dumas.Model.Data;
+import id.creatodidak.nyaganagari.Models.Data;
 
 public class Mlogin {
 

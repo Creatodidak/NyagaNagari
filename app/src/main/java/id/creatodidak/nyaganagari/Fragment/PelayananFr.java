@@ -1,14 +1,28 @@
 package id.creatodidak.nyaganagari.Fragment;
 
+import android.app.TabActivity;
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TabHost;
 
+import com.google.android.material.tabs.TabLayout;
+
+import id.creatodidak.nyaganagari.DumasPolres;
 import id.creatodidak.nyaganagari.R;
+import id.creatodidak.nyaganagari.wviews.wvIDEN;
+import id.creatodidak.nyaganagari.wviews.wvSIM;
+import id.creatodidak.nyaganagari.wviews.wvSKCK;
+import id.creatodidak.nyaganagari.wviews.wvSPKT;
+import id.creatodidak.nyaganagari.wviews.wvVAKSIN;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -62,5 +76,65 @@ public class PelayananFr extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_pelayanan, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        ImageView sim, skck, iden, spkt, vaksin, lapor;
+
+        lapor = view.findViewById(R.id.laporkan);
+        sim = view.findViewById(R.id.plSIM);
+        skck = view.findViewById(R.id.plSKCK);
+        iden = view.findViewById(R.id.plIDEN);
+        spkt = view.findViewById(R.id.plSPKT);
+        vaksin = view.findViewById(R.id.plVAKSIN);
+
+        lapor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), DumasPolres.class);
+                startActivity(intent);
+            }
+        });
+
+        sim.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), wvSIM.class);
+                startActivity(i);
+            }
+        });
+
+        skck.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), wvSKCK.class);
+                startActivity(i);
+            }
+        });
+
+        iden.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), wvIDEN.class);
+                startActivity(i);
+            }
+        });
+        spkt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), wvSPKT.class);
+                startActivity(i);
+            }
+        });
+        vaksin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), wvVAKSIN.class);
+                startActivity(i);
+            }
+        });
     }
 }

@@ -1,4 +1,4 @@
-package id.creatodidak.nyaganagari.dumas;
+package id.creatodidak.nyaganagari;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -6,7 +6,7 @@ import android.preference.PreferenceManager;
 
 import java.util.HashMap;
 
-import id.creatodidak.nyaganagari.dumas.Model.Data;
+import id.creatodidak.nyaganagari.Models.Data;
 
 
 public class Session {

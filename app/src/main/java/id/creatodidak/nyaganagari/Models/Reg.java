@@ -1,4 +1,4 @@
-package id.creatodidak.nyaganagari.dumas.Model;
+package id.creatodidak.nyaganagari.Models;
 
 import com.google.gson.annotations.SerializedName;
 

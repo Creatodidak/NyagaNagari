@@ -23,6 +23,7 @@ import android.widget.Toast;
 import id.creatodidak.nyaganagari.API.ApiClient;
 import id.creatodidak.nyaganagari.API.ApiInterface;
 import id.creatodidak.nyaganagari.Models.Update;
+import id.creatodidak.nyaganagari.Models.UpdateLoc;
 import id.creatodidak.nyaganagari.UpdateApp;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -41,6 +42,8 @@ public class Welcome extends AppCompatActivity {
         setContentView(R.layout.activity_welcome);
 
         apiInterface = ApiClient.getClient().create(ApiInterface.class);
+
+
 
 
         Call<Update> updateCall = apiInterface.updates();
@@ -116,7 +119,7 @@ public class Welcome extends AppCompatActivity {
             @Override
             public void run() {
                 // Do something after 5s = 5000ms
-                Intent i = new Intent(Welcome.this, Beranda.class);
+                Intent i = new Intent(Welcome.this, Login.class);
                 startActivity(i);
                 finish();
             }

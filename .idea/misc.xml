@@ -3,17 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/NyagaNagari/app/src/main/res/layout/activity_home.xml" value="0.27291666666666664" />
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/NyagaNagari/app/src/main/res/layout/activity_welcome.xml" value="0.27291666666666664" />
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/NyagaNagari/app/src/main/res/layout/aksipengaduan.xml" value="0.27291666666666664" />
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/NyagaNagari/app/src/main/res/layout/customtab.xml" value="0.27291666666666664" />
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/NyagaNagari/app/src/main/res/layout/fragment_baca_berita.xml" value="0.12552083333333333" />
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/NyagaNagari/app/src/main/res/layout/fragment_bantuan.xml" value="0.27291666666666664" />
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/NyagaNagari/app/src/main/res/layout/fragment_berita.xml" value="0.27291666666666664" />
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/NyagaNagari/app/src/main/res/layout/fragment_menu.xml" value="0.33" />
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/NyagaNagari/app/src/main/res/layout/fragment_pelayanan.xml" value="0.27291666666666664" />
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/NyagaNagari/app/src/main/res/layout/fragment_penmas.xml" value="0.25885416666666666" />
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/NyagaNagari/app/src/main/res/layout/new_beranda.xml" value="0.27291666666666664" />
         <entry key="app/src/main/res/drawable/bar.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/btnup.xml" value="0.1765" />
         <entry key="app/src/main/res/drawable/inputtextbg.xml" value="0.1405" />
@@ -23,11 +12,22 @@
         <entry key="app/src/main/res/drawable/upbg.xml" value="0.1765" />
         <entry key="app/src/main/res/layout/activity_baca_berita.xml" value="0.1466438648995297" />
         <entry key="app/src/main/res/layout/activity_checkupdate.xml" value="0.1466438648995297" />
+        <entry key="app/src/main/res/layout/activity_dumas_polres.xml" value="0.17864583333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17864583333333334" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.14478682988602787" />
+        <entry key="app/src/main/res/layout/activity_rincian_update.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_test.xml" value="0.17864583333333334" />
+        <entry key="app/src/main/res/layout/activity_widget_panic_button.xml" value="0.17864583333333334" />
+        <entry key="app/src/main/res/layout/activity_wv_iden.xml" value="0.24739583333333334" />
+        <entry key="app/src/main/res/layout/activity_wv_sim.xml" value="0.24739583333333334" />
+        <entry key="app/src/main/res/layout/activity_wv_skck.xml" value="0.24739583333333334" />
+        <entry key="app/src/main/res/layout/activity_wv_spkt.xml" value="0.24739583333333334" />
+        <entry key="app/src/main/res/layout/activity_wv_vaksin.xml" value="0.24739583333333334" />
         <entry key="app/src/main/res/layout/aksipengaduan.xml" value="0.17864583333333334" />
         <entry key="app/src/main/res/layout/fragment_baca_berita.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_berita.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_menu.xml" value="0.17864583333333334" />
+        <entry key="app/src/main/res/layout/fragment_pelayanan.xml" value="0.24739583333333334" />
         <entry key="app/src/main/res/layout/frberanda.xml" value="0.25" />
         <entry key="app/src/main/res/layout/frlapor.xml" value="0.1466438648995297" />
         <entry key="app/src/main/res/layout/frprofile.xml" value="0.33" />
@@ -38,10 +38,14 @@
         <entry key="app/src/main/res/layout/listprogress.xml" value="0.25" />
         <entry key="app/src/main/res/layout/login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/new_beranda.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/notification.xml" value="0.17864583333333334" />
+        <entry key="app/src/main/res/layout/panic_button.xml" value="0.17864583333333334" />
         <entry key="app/src/main/res/layout/slider_layout.xml" value="0.14578879863189398" />
         <entry key="app/src/main/res/layout/splash.xml" value="0.22" />
         <entry key="app/src/main/res/layout/update.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/widget_layout.xml" value="0.17760416666666667" />
         <entry key="app/src/main/res/menu/bottom_navigation_items.xml" value="0.1466438648995297" />
+        <entry key="app/src/main/res/xml/app_widget_info.xml" value="0.17864583333333334" />
       </map>
     </option>
   </component>

@@ -39,8 +39,6 @@ import id.creatodidak.nyaganagari.dumas.API.ApiClient;
 import id.creatodidak.nyaganagari.dumas.API.ApiInterface;
 import id.creatodidak.nyaganagari.dumas.Callback.CustomCallback;
 import id.creatodidak.nyaganagari.dumas.Config;
-import id.creatodidak.nyaganagari.dumas.Model.Response;
-import id.creatodidak.nyaganagari.dumas.Session;
 import id.creatodidak.nyaganagari.dumas.progressLapor;
 import okhttp3.MediaType;
 import okhttp3.RequestBody;

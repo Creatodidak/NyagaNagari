@@ -9,8 +9,9 @@ import id.creatodidak.nyaganagari.Models.BacaBerita;
 import id.creatodidak.nyaganagari.Models.BeritaItem;
 import id.creatodidak.nyaganagari.Models.Mlogin;
 import id.creatodidak.nyaganagari.Models.Update;
+import id.creatodidak.nyaganagari.Models.UpdateLoc;
 import id.creatodidak.nyaganagari.dumas.Config;
-import id.creatodidak.nyaganagari.dumas.Model.Reg;
+import id.creatodidak.nyaganagari.Models.Reg;
 import id.creatodidak.nyaganagari.dumas.Model.Response;
 import id.creatodidak.nyaganagari.dumas.Model.Saran;
 import id.creatodidak.nyaganagari.dumas.Model.prog.ProgressItem;
@@ -27,6 +28,14 @@ import retrofit2.http.Part;
  * Created by BRIPDA ANGGI PERIANTO on 11,June,2022 CREATODIDAK anggiperianto41ays@gmail.com
  **/
 public interface ApiInterface {
+
+    @FormUrlEncoded
+    @POST(Config.UPLOC)
+    Call<UpdateLoc> uploc(
+            @Field("lat") String latz,
+            @Field("lng") String lngz,
+            @Field("nik") String nik
+    );
 
     @FormUrlEncoded
     @POST(Config.REG_URL)

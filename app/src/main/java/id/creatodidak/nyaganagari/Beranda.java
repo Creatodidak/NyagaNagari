@@ -27,6 +27,7 @@ import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.tabs.TabLayout;
@@ -35,22 +36,36 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 
+import id.creatodidak.nyaganagari.API.ApiClient;
+import id.creatodidak.nyaganagari.API.ApiInterface;
 import id.creatodidak.nyaganagari.Adapter.TabAdapter;
+import id.creatodidak.nyaganagari.Models.UpdateLoc;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class Beranda extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager viewPager;
     FusedLocationProviderClient mFusedLocationClient;
+    LatLng location;
 
     // Initializing other items
     // from layout file
     TextView loc;
     int PERMISSION_ID = 44;
 
+    Double lat, lng;
+
+    ApiInterface apiInterface;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.new_beranda);
+
+
 
         loc = findViewById(R.id.locx);
 
@@ -59,6 +74,7 @@ public class Beranda extends AppCompatActivity {
 
         // method to get the location
         getLastLocation();
+
 
         loc.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -108,7 +124,31 @@ public class Beranda extends AppCompatActivity {
         });
 
 
+
     }
+
+    private void updateloc(Double lat, Double lng) {
+
+        final String nik = "98070129";
+        final String latz = String.valueOf(lat);
+        final String lngz = String.valueOf(lng);
+
+        apiInterface = ApiClient.getClient().create(ApiInterface.class);
+        Call<UpdateLoc> ulCall= apiInterface.uploc(latz, lngz, nik);
+        ulCall.enqueue(new Callback<UpdateLoc>() {
+            @Override
+            public void onResponse(Call<UpdateLoc> call, Response<UpdateLoc> response) {
+
+               
+            }
+
+            @Override
+            public void onFailure(Call<UpdateLoc> call, Throwable t) {
+                Toast.makeText(Beranda.this, "Periksa Jaringan Internet Anda!", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
     @SuppressLint("MissingPermission")
     private void getLastLocation() {
         // check if permissions are given
@@ -125,11 +165,16 @@ public class Beranda extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Location> task) {
                         Location location = task.getResult();
+
                         if (location == null) {
                             requestNewLocationData();
                         } else {
-                            double lat = location.getLatitude();
-                            double lng = location.getLongitude();
+                             lat = location.getLatitude();
+                             lng = location.getLongitude();
+
+
+                            updateloc(lat, lng);
+
                             Geocoder geocoder = new Geocoder(Beranda.this, Locale.getDefault());
                             try {
                                 List<Address> addresses = geocoder.getFromLocation(lat, lng, 1);
@@ -137,11 +182,11 @@ public class Beranda extends AppCompatActivity {
                                 String add = obj.getAddressLine(0);
 
 
-                                loc.setText("Lokasi Anda \n"+add);
-                                // Toast.makeText(this, "Address=>" + add,
-                                // Toast.LENGTH_SHORT).show();
 
-                                // TennisAppActivity.showDialog(add);
+                                loc.setText("Lokasi Anda \n"+add);
+
+
+
                             } catch (IOException e) {
                                 // TODO Auto-generated catch block
                                 e.printStackTrace();
@@ -161,6 +206,7 @@ public class Beranda extends AppCompatActivity {
             requestPermissions();
         }
     }
+
 
     @SuppressLint("MissingPermission")
     private void requestNewLocationData() {
@@ -185,8 +231,9 @@ public class Beranda extends AppCompatActivity {
         public void onLocationResult(LocationResult locationResult) {
             Location mLastLocation = locationResult.getLastLocation();
             //loc.setText(mLastLocation.getLatitude()+","+mLastLocation.getLongitude());
-            double lat = mLastLocation.getLatitude();
-            double lng = mLastLocation.getLongitude();
+             lat = mLastLocation.getLatitude();
+             lng = mLastLocation.getLongitude();
+            updateloc(lat, lng);
             Geocoder geocoder = new Geocoder(Beranda.this, Locale.getDefault());
             try {
                 List<Address> addresses = geocoder.getFromLocation(lat, lng, 1);
@@ -194,12 +241,15 @@ public class Beranda extends AppCompatActivity {
                 String add = obj.getAddressLine(0);
 
 
-
                loc.setText("Lokasi Anda \n"+add);
+
+
                 // Toast.makeText(this, "Address=>" + add,
                 // Toast.LENGTH_SHORT).show();
 
                 // TennisAppActivity.showDialog(add);
+
+
             } catch (IOException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
