@@ -48,16 +48,14 @@ public class Beranda extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager viewPager;
     FusedLocationProviderClient mFusedLocationClient;
-    LatLng location;
-
-    // Initializing other items
-    // from layout file
-    TextView loc;
-    int PERMISSION_ID = 44;
-
     Double lat, lng;
-
     ApiInterface apiInterface;
+    String nama;
+    int PERMISSION_ID = 44;
+    TextView loc;
+
+
+
 
 
     @Override
@@ -90,25 +88,31 @@ public class Beranda extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setCustomView(view1));
 
         View view2 = getLayoutInflater().inflate(R.layout.customtab, null);
-        view2.findViewById(R.id.icon).setBackgroundResource(R.drawable.icpengaduan);
+        view2.findViewById(R.id.icon).setBackgroundResource(R.drawable.aman);
         tabLayout.addTab(tabLayout.newTab().setCustomView(view2));
 
         View view3 = getLayoutInflater().inflate(R.layout.customtab, null);
-        view3.findViewById(R.id.icon).setBackgroundResource(R.drawable.icpelayanan);
+        view3.findViewById(R.id.icon).setBackgroundResource(R.drawable.icpengaduan);
         tabLayout.addTab(tabLayout.newTab().setCustomView(view3));
 
         View view4 = getLayoutInflater().inflate(R.layout.customtab, null);
-        view4.findViewById(R.id.icon).setBackgroundResource(R.drawable.icpenmas);
+        view4.findViewById(R.id.icon).setBackgroundResource(R.drawable.icpelayanan);
         tabLayout.addTab(tabLayout.newTab().setCustomView(view4));
 
         View view5 = getLayoutInflater().inflate(R.layout.customtab, null);
-        view5.findViewById(R.id.icon).setBackgroundResource(R.drawable.icbantuan);
+        view5.findViewById(R.id.icon).setBackgroundResource(R.drawable.icpenmas);
         tabLayout.addTab(tabLayout.newTab().setCustomView(view5));
 
+        View view6 = getLayoutInflater().inflate(R.layout.customtab, null);
+        view6.findViewById(R.id.icon).setBackgroundResource(R.drawable.icbantuan);
+        tabLayout.addTab(tabLayout.newTab().setCustomView(view6));
+
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+
         final TabAdapter adapter = new TabAdapter(this,getSupportFragmentManager(),
                 tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
+
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -123,13 +127,21 @@ public class Beranda extends AppCompatActivity {
             }
         });
 
-
+        Session session = new Session(Beranda.this);
+        nama = session.getUserDetail().get(Session.NAMA);
 
     }
 
     private void updateloc(Double lat, Double lng) {
 
-        final String nik = "98070129";
+        Session session;
+
+        session = new Session(Beranda.this);
+
+        String nik;
+
+        nik = session.getUserDetail().get(Session.NIK);
+
         final String latz = String.valueOf(lat);
         final String lngz = String.valueOf(lng);
 
@@ -179,12 +191,15 @@ public class Beranda extends AppCompatActivity {
                             try {
                                 List<Address> addresses = geocoder.getFromLocation(lat, lng, 1);
                                 Address obj = addresses.get(0);
-                                String add = obj.getAddressLine(0);
+                                String add = obj.getSubAdminArea();
 
 
 
-                                loc.setText("Lokasi Anda \n"+add);
-
+                                if (add.equals("Landak Regency")){
+                                    loc.setText(nama+"\n"+"Kabupaten Landak");
+                                }else{
+                                    loc.setText(nama+"\n"+"Anda Tidak Sedang Di Kabupaten Landak");
+                                }
 
 
                             } catch (IOException e) {
@@ -238,10 +253,16 @@ public class Beranda extends AppCompatActivity {
             try {
                 List<Address> addresses = geocoder.getFromLocation(lat, lng, 1);
                 Address obj = addresses.get(0);
-                String add = obj.getAddressLine(0);
+                String add = obj.getSubAdminArea();
+
+                if (add.equals("Landak Regency")){
+                    loc.setText(nama+"\n"+"Kabupaten Landak");
+                }else{
+                    loc.setText(nama+"\n"+"Anda Tidak Sedang Di Kabupaten Landak");
+                }
 
 
-               loc.setText("Lokasi Anda \n"+add);
+
 
 
                 // Toast.makeText(this, "Address=>" + add,

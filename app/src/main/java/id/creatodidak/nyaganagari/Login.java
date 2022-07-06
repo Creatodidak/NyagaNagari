@@ -1,6 +1,7 @@
 package id.creatodidak.nyaganagari;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,6 +32,8 @@ public class Login extends AppCompatActivity {
     Session session;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +46,11 @@ public class Login extends AppCompatActivity {
             Intent intent = new Intent(Login.this, Register.class);
             startActivity(intent);
         });
+
+        session = new Session(Login.this);
+        if (session.isLoggedIn()) {
+            moveToDb();
+        }
 
         loginBtn = findViewById(R.id.loginBtn);
         EditText etNik = findViewById(R.id.nik);
@@ -62,6 +70,11 @@ public class Login extends AppCompatActivity {
         });
 
 
+    }
+
+    private void moveToDb() {
+        Intent intent = new Intent(Login.this, Beranda.class);
+        startActivity(intent);
     }
 
     private void login(String nik, String password) {

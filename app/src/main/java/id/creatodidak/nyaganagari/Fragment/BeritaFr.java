@@ -107,7 +107,6 @@ public class BeritaFr extends Fragment implements ViewPagerEx.OnPageChangeListen
         rv.setLayoutManager(layoutManager);
         beritaAdapter = new BeritaAdapter(BeritaList);
         rv.setAdapter(beritaAdapter);
-        ImageView rf = view.findViewById(R.id.reload);
 
         berita(view);
 

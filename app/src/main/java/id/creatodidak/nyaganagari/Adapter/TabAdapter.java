@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import id.creatodidak.nyaganagari.Fragment.BantuanFr;
 import id.creatodidak.nyaganagari.Fragment.BeritaFr;
 import id.creatodidak.nyaganagari.Fragment.MenuFr;
+import id.creatodidak.nyaganagari.Fragment.PanikFr;
 import id.creatodidak.nyaganagari.Fragment.PelayananFr;
 import id.creatodidak.nyaganagari.Fragment.PenmasFr;
 
@@ -26,19 +27,23 @@ public class TabAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         switch (position) {
+
             case 0:
                 BeritaFr beritaFr = new BeritaFr();
                 return beritaFr;
             case 1:
+                PanikFr panikFr = new PanikFr();
+                return panikFr;
+            case 2:
                 MenuFr menuFr = new MenuFr();
                 return menuFr;
-            case 2:
+            case 3:
                 PelayananFr pelayananFr = new PelayananFr();
                 return pelayananFr;
-            case 3:
+            case 4:
                 PenmasFr penmasFr = new PenmasFr();
                 return penmasFr;
-            case 4:
+            case 5:
                 BantuanFr bantuanFr = new BantuanFr();
                 return bantuanFr;
             default:
