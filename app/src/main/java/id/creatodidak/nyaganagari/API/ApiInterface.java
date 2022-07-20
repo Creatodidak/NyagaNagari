@@ -8,6 +8,7 @@ import id.creatodidak.nyaganagari.Confighome;
 import id.creatodidak.nyaganagari.Models.BacaBerita;
 import id.creatodidak.nyaganagari.Models.BeritaItem;
 import id.creatodidak.nyaganagari.Models.Mlogin;
+import id.creatodidak.nyaganagari.Models.PejabatItem;
 import id.creatodidak.nyaganagari.Models.Update;
 import id.creatodidak.nyaganagari.Models.UpdateLoc;
 import id.creatodidak.nyaganagari.dumas.Config;
@@ -94,4 +95,7 @@ public interface ApiInterface {
 
     @GET(Confighome.BERITA)
     Call<List<BeritaItem>> getBerita();
+
+    @GET(Confighome.PEJABAT)
+    Call<List<PejabatItem>> getPejabat();
 }

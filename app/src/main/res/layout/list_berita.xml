@@ -61,7 +61,7 @@
             </androidx.cardview.widget.CardView>
 
             <ImageView
-                android:id="@+id/thumbimg"
+                android:id="@+id/pjFoto"
                 android:layout_width="match_parent"
                 android:layout_height="175dp"
                 android:scaleType="centerCrop"
@@ -80,10 +80,10 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/thumbimg">
+                app:layout_constraintTop_toBottomOf="@id/pjFoto">
 
                 <TextView
-                    android:id="@+id/txJudul"
+                    android:id="@+id/pjNama"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/futurbold"

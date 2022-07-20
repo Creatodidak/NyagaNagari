@@ -6,12 +6,14 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import id.creatodidak.nyaganagari.Fragment.AccountFr;
 import id.creatodidak.nyaganagari.Fragment.BantuanFr;
 import id.creatodidak.nyaganagari.Fragment.BeritaFr;
 import id.creatodidak.nyaganagari.Fragment.MenuFr;
 import id.creatodidak.nyaganagari.Fragment.PanikFr;
 import id.creatodidak.nyaganagari.Fragment.PelayananFr;
 import id.creatodidak.nyaganagari.Fragment.PenmasFr;
+import id.creatodidak.nyaganagari.Fragment.ProfileFr;
 
 /**
  * Created by BRIPDA ANGGI PERIANTO on 24,June,2022 CREATODIDAK anggiperianto41ays@gmail.com
@@ -46,6 +48,12 @@ public class TabAdapter extends FragmentPagerAdapter {
             case 5:
                 BantuanFr bantuanFr = new BantuanFr();
                 return bantuanFr;
+            case 6:
+                ProfileFr profileFr = new ProfileFr();
+                return profileFr;
+            case 7:
+                AccountFr accountFr = new AccountFr();
+                return accountFr;
             default:
                 return null;
         }

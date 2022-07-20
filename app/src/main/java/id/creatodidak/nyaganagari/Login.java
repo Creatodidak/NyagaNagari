@@ -75,6 +75,7 @@ public class Login extends AppCompatActivity {
     private void moveToDb() {
         Intent intent = new Intent(Login.this, Beranda.class);
         startActivity(intent);
+        finish();
     }
 
     private void login(String nik, String password) {
@@ -96,7 +97,7 @@ public class Login extends AppCompatActivity {
 
                     Intent intent = new Intent(Login.this, Beranda.class);
                     startActivity(intent);
-
+                    finish();
                 }
 
                 if (response.body().isNext()) {

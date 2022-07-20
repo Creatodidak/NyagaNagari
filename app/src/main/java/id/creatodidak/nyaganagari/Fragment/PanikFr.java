@@ -178,8 +178,8 @@ public class PanikFr extends Fragment {
                             String add = obj.getSubAdminArea();
 
                             if (add.equals("Landak Regency")){
-
-
+                                panik(lat, lng);
+                            }else if(add.equals("Kabupaten Landak")){
                                 panik(lat, lng);
                             }else{
                                 pnk.setEnabled(false);
@@ -234,7 +234,8 @@ public class PanikFr extends Fragment {
                 String add = obj.getSubAdminArea();
 
                 if (add.equals("Landak Regency")){
-
+                    panik(lat, lng);
+                }else if(add.equals("Kabupaten Landak")){
                     panik(lat, lng);
                 }else{
                     pnk.setEnabled(false);

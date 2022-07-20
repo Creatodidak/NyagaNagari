@@ -25,11 +25,13 @@
         <entry key="app/src/main/res/layout/activity_wv_vaksin.xml" value="0.24739583333333334" />
         <entry key="app/src/main/res/layout/aksipengaduan.xml" value="0.17864583333333334" />
         <entry key="app/src/main/res/layout/customtab.xml" value="0.17864583333333334" />
+        <entry key="app/src/main/res/layout/fragment_account.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_baca_berita.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_berita.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_menu.xml" value="0.17864583333333334" />
         <entry key="app/src/main/res/layout/fragment_panik.xml" value="0.17864583333333334" />
         <entry key="app/src/main/res/layout/fragment_pelayanan.xml" value="0.24739583333333334" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.17864583333333334" />
         <entry key="app/src/main/res/layout/frberanda.xml" value="0.25" />
         <entry key="app/src/main/res/layout/frlapor.xml" value="0.1466438648995297" />
         <entry key="app/src/main/res/layout/frprofile.xml" value="0.33" />
@@ -37,6 +39,7 @@
         <entry key="app/src/main/res/layout/frsaran.xml" value="0.22" />
         <entry key="app/src/main/res/layout/inputpengaduan.xml" value="0.296875" />
         <entry key="app/src/main/res/layout/list_berita.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/list_pejabat.xml" value="0.33" />
         <entry key="app/src/main/res/layout/listprogress.xml" value="0.25" />
         <entry key="app/src/main/res/layout/login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/new_beranda.xml" value="0.22" />

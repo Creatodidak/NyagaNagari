@@ -37,7 +37,7 @@
                     android:layout_weight="1"
                     android:gravity="left|center_vertical"
                     android:padding="10dp"
-                    android:text="Update v1.1 Beta"
+                    android:text="Update"
                     android:textSize="20dp" />
 
             </LinearLayout>
@@ -55,7 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text=" - Penambahan Dumas Polres Landak \n - Penambahan Lapor.go.id \n - Penambahan WBS Polri \n - Penambahan Fitur Notifikasi \n - Update Minor \n\n\n Catatan: \n Untuk Fitur Dumas Polres Landak baru 50% \n\n\n\n\n\n Salam Hangat, tetap Semangat :) \n POLRES LANDAK BISA!"
+                android:text="Salam Hangat, tetap Semangat :) \n POLRES LANDAK BISA!"
                 android:textSize="16sp" />
 
             <Button

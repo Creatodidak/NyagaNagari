@@ -80,10 +80,10 @@ public class BeritaAdapter extends RecyclerView.Adapter<BeritaAdapter.ViewHolder
             super(itemView);
 
             tanggal = itemView.findViewById(R.id.txTanggal);
-            judul = itemView.findViewById(R.id.txJudul);
+            judul = itemView.findViewById(R.id.pjNama);
             satker = itemView.findViewById(R.id.txSatker);
             view = itemView.findViewById(R.id.bbView);
-            thb = itemView.findViewById(R.id.thumbimg);
+            thb = itemView.findViewById(R.id.pjFoto);
 
             thm = itemView.findViewById(R.id.thumb);
 

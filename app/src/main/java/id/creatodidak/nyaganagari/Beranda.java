@@ -88,7 +88,7 @@ public class Beranda extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setCustomView(view1));
 
         View view2 = getLayoutInflater().inflate(R.layout.customtab, null);
-        view2.findViewById(R.id.icon).setBackgroundResource(R.drawable.aman);
+        view2.findViewById(R.id.icon).setBackgroundResource(R.drawable.icdarurat);
         tabLayout.addTab(tabLayout.newTab().setCustomView(view2));
 
         View view3 = getLayoutInflater().inflate(R.layout.customtab, null);
@@ -106,6 +106,14 @@ public class Beranda extends AppCompatActivity {
         View view6 = getLayoutInflater().inflate(R.layout.customtab, null);
         view6.findViewById(R.id.icon).setBackgroundResource(R.drawable.icbantuan);
         tabLayout.addTab(tabLayout.newTab().setCustomView(view6));
+
+        View view7 = getLayoutInflater().inflate(R.layout.customtab, null);
+        view7.findViewById(R.id.icon).setBackgroundResource(R.drawable.icprofile);
+        tabLayout.addTab(tabLayout.newTab().setCustomView(view7));
+
+        View view8 = getLayoutInflater().inflate(R.layout.customtab, null);
+        view8.findViewById(R.id.icon).setBackgroundResource(R.drawable.icaccount);
+        tabLayout.addTab(tabLayout.newTab().setCustomView(view8));
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
